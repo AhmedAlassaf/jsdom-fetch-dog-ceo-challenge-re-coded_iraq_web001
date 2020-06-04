@@ -31,12 +31,13 @@ function addDogBreed(breed){
   const ul = document.getElementById('dog-breeds')
   const dogBreed = document.createElement('li');
   const dropDownList = document.getElementById('breed-dropdown')
-  dogBreed.textContent = `${breed}`;
+  
   dropDownList.addEventListener('change', (event) => {
     if (event.target.value == dogBreed.textContent.charAt(0)){
-      
+      dogBreed.textContent = `${breed}`;
+      ul.appendChild(dogBreed);
     }
-  ul.appendChild(dogBreed);
+  
   dogBreed.style.cursor = 'pointer'
     dogBreed.addEventListener('click', (e) => {
       dogBreed.style.color = 'violet'
