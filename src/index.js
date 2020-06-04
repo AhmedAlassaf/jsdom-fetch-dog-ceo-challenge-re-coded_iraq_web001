@@ -34,7 +34,6 @@ function addDogBreed(breed){
   dogBreed.textContent = `${breed}`;
   dropDownList.addEventListener('change', (event) => {
     if (event.target.value == dogBreed.textContent.charAt(0)){
-      
       ul.appendChild(dogBreed);
     }
   
