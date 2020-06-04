@@ -34,16 +34,18 @@ function addDogBreed(breed){
   dogBreed.textContent = `${breed}`;
   ul.appendChild(dogBreed);
   
+   dogBreed.style.cursor = 'pointer'
+    dogBreed.addEventListener('click', (e) => {
+      dogBreed.style.color = 'violet'
+    })
+  
   dropDownList.addEventListener('change', (event) => {
     dogBreed.remove()
     if (event.target.value == dogBreed.textContent.charAt(0)){
       ul.appendChild(dogBreed)
     }
   
-  dogBreed.style.cursor = 'pointer'
-    dogBreed.addEventListener('click', (e) => {
-      dogBreed.style.color = 'violet'
-    })
+ 
     
  })
 }
