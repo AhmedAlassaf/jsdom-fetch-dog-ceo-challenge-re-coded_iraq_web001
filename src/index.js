@@ -32,7 +32,8 @@ function addDogBreed(breed){
   const dogBreed = document.createElement('li');
   const dropDownList = document.getElementById('breed-dropdown')
   dogBreed.textContent = `${breed}`;
-      ul.appendChild(dogBreed);
+  ul.appendChild(dogBreed);
+  
   dropDownList.addEventListener('change', (event) => {
     if (event.target.value == dogBreed.textContent.charAt(0)){
       ul.innerHTML = "";
